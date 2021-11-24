@@ -1,0 +1,325 @@
+aws ssl certification 
+
+https (Hypertext Transfer Protocol Secure)
+
+port 443
+
+Hypertext Transfer Protocol Secure (https) is a combination of the Hypertext Transfer Protocol (HTTP) 
+with the Secure Socket Layer (SSL)/Transport Layer Security (TLS) protocol. 
+
+setp:
+
+     1 AWS Certificate Manager
+       Request a certificate
+
+  Certificate typeInfo
+   ACM certificates can be used to establish secure communications access across the internet or within an internal network.
+   Choose the type of certificate for acm to provide.
+
+  *   Request a public certificate
+   Request a public SSL/TLS certificate from Amazon. By default, public certificates are trusted by browsers and operating systems.
+
+  * Request a private certificate
+    No private CAs available for issuance.
+
+   Request public certificate
+   
+   Domain names
+ Fully qualified domain nameInfo
+  vishalso.ml (domain_name)
+---------------------------------------
+|Add another name to this certificate |
+|-------------------------------------|
+You can add additional names to this certificate. For example, if you're requesting a certificate for "www.example.com", 
+you might want to add the name "example.com" so that customers can reach your site by either name.
+
+
+ Select validation methodInfo
+
+ Select a method for validating domain ownership
+
+DNS validation - recommended
+Choose this option if you are authorized to modify the DNS configuration for the domains in your certificate request.
+
+Email validation
+Choose this option if you do not have permission or cannot obtain permission to modify the DNS configuration for the domains in your certificate request.
+
+
+TagsInfo
+To help you manage your certificates you can optionally assign your own metadata to each resource in the form of tags.
+
+request
+
+step2 
+  router 53
+ hosts zone 
+ Domain name 
+type of hosts
+ public hostsed zone   in used 
+ private hosted zone 
+ 
+setp3 
+freenom 
+mangement tools
+namesserver enter 
+%user defaults server%
+
+* user customer namesserver(enter below)
+change nameserver
+
+step 4 
+aws certicate mangenent
+creater router 53 record 
+cNames 
+
+step5 
+creater ec2 instance 
+path of user data
+#!/bin/bash
+yum update -y
+yum install httpd -y
+echo "<h1>welcome to home $HOSTNAME</h1>" > var/www/html/index.html
+systemctl start httpd 
+systemctl enable httpd 
+
+security group 
+ssh          port 22 
+http         port 80
+httpd        port 443
+
+
+step4 
+load blancers 
+creater load blancer
+creater Application Load blancer
+listener 
+http 443 
+creater taget group 
+protocol 
+http  80
+
+
+register target 
+target group check in healthy
+
+agian router 53 
+create r a record 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<body>
+
+<h2>Image Size</h2>
+
+<p>Here we use the style attribute to specify the width and height of an image:</p>
+
+<img src="cross_img.jpg" alt="my photo" style="width:500px;height:600px;">
+
+<marquee class="pull-center" behavior="scroll" direction="left">Please help Indian railways and government of India in moving towards a digitized and cashless economy. Eradicate black money.
+
+</marquee>
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img_nature_wide.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img_snow_wide.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img_mountains_wide.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
